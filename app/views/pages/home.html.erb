@@ -1,28 +1,28 @@
 <div class="container">
-  <div class="calculator-container">
-    <div class="calculator-screen">2
+  <div class="calculator-container" data-controller="calculation">
+    <div class="calculator-screen" data-calculation-target="result">
     </div>
     <div class="calculator-buttons-container">
-      <div class="button">ON</div>
-      <div class="button">AC</div>
-      <div class="button">C</div>
-      <div class="button">√</div>
-      <div class="button">7</div>
-      <div class="button">8</div>
-      <div class="button">9</div>
-      <div class="button">/</div>
-      <div class="button">4</div>
-      <div class="button">5</div>
-      <div class="button">6</div>
-      <div class="button">X</div>
-      <div class="button">1</div>
-      <div class="button">2</div>
-      <div class="button">3</div>
-      <div class="button">-</div>
-      <div class="button">0</div>
-      <div class="button">.</div>
-      <div class="button">=</div>
-      <div class="button">+</div>
+      <button class="button" data-action="click->calculation#on">ON</button>
+      <button class="button" data-calculation-target="button">AC</button>
+      <button class="button" data-calculation-target="button">C</button>
+      <button class="button" data-calculation-target="button">√</button>
+      <button class="button" data-calculation-target="button">7</button>
+      <button class="button" data-calculation-target="button">8</button>
+      <button class="button" data-calculation-target="button">9</button>
+      <button class="button" data-calculation-target="button">/</button>
+      <button class="button" data-calculation-target="button">4</button>
+      <button class="button" data-calculation-target="button">5</button>
+      <button class="button" data-calculation-target="button">6</button>
+      <button class="button" data-calculation-target="button">X</button>
+      <button class="button" data-calculation-target="button">1</button>
+      <button class="button" data-calculation-target="button">2</button>
+      <button class="button" data-calculation-target="button">3</button>
+      <button class="button" data-calculation-target="button">-</button>
+      <button class="button" data-calculation-target="button">0</button>
+      <button class="button" data-calculation-target="button">.</button>
+      <button class="button" data-calculation-target="button">=</button>
+      <button class="button" data-calculation-target="button">+</button>
     </div>
   </div>
 </div>
