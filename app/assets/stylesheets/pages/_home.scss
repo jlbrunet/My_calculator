@@ -1,12 +1,15 @@
 // Specific CSS for your home-page
 
+body {
+  background-color: black;
+}
+
 .calculator-container {
   margin: 60px auto;
-  border: 1px solid $grey1;
   border-radius: 10px;
   width: 300px;
   height: 500px;
-  box-shadow: 1px 1px 5px $grey1;
+  box-shadow: lightgray 0px 0px 10px 2px;
   position: relative;
 }
 
@@ -16,14 +19,15 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  border: 1px solid $grey1;
+  border: 1.5px solid $light-gray;
   border-radius: 10px;
   display: flex;
   justify-content: right;
   align-items: center;
-  color: $grey1;
-  font-weight: bold;
   padding-right: 50px;
+  color: $white-gray;
+  letter-spacing: 2px;  
+  font-family: 'Rubik Bubbles', cursive;
 }
 
 .calculator-buttons-container {
@@ -38,15 +42,23 @@
   justify-content: space-between;
 }
 
-.button {
+button {
   display: flex;
   width: 60px;
   height: 45px;
   margin: 3px;
-  border: 1px solid $grey1;
+  border: none;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  color: $grey1;
-  font-weight: bold;
+  color: black;
+  background-color: $white-gray;
+  font-family: 'Rubik Bubbles', cursive;
 }
+
+ button:hover {
+  border: 1.5px solid $white-gray;
+  background-color: black;
+  color: $white-gray;
+  transition: all .30s ease;
+ }

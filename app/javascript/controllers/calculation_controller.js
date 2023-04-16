@@ -1,9 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
 let elements = []
+let new_elements = []
+let result = 0
+
 // Connects to data-controller="calculation"
 export default class extends Controller {
-  static targets = ["result", "button1", "button2", "button3", "button4", "button5", "button6", "button7", "button8", "button9", "button0"]
+  static targets = ["result"]
   connect() {
 
   }
@@ -16,20 +19,22 @@ export default class extends Controller {
   ac() {
     if (this.resultTarget.innerText =! "") {
       this.resultTarget.innerText = ""
-      // il faudra effacer tout le dernier calcul
+      elements = []
+      new_elements = []
     }
   }
 
   c() {
     if (this.resultTarget.innerText =! "") {
       this.resultTarget.innerText = ""
-      // il faudra effacer le dernier chiffre entré
+      elements = []
+      new_elements = []
     }
   }
 
   item(event) {
     elements.push(event.currentTarget.innerText)
-    let display = elements.join(" ")
+    let display = elements.join("")
     this.resultTarget.innerText = display
   }
 
@@ -40,8 +45,18 @@ export default class extends Controller {
         element = element
       }
       else {
-        element = +element
+        element = a
       }
+      new_elements.push(element)
     })
+    result = eval(new_elements.join(""))
+    this.resultTarget.innerText = result
+    elements = []
+    new_elements = []
+  }
+
+  snake() {
+    console.log("coucou")
+    // à coder
   }
 }
