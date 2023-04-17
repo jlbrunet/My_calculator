@@ -8,7 +8,6 @@ let result = 0
 export default class extends Controller {
   static targets = ["result"]
   connect() {
-    //comment
   }
 
   on() {
