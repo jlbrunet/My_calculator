@@ -53,9 +53,4 @@ export default class extends Controller {
     elements = []
     new_elements = []
   }
-
-  snake() {
-    console.log("coucou")
-    // à coder
-  }
 }
